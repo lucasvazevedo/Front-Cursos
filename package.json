@@ -1,0 +1,15 @@
+{
+  "name": "web-curso",
+  "version": "1.0.0",
+  "description": "O projeto consiste no desenvolvimento de um portal de cursos online, que permitirá aos usuários se inscreverem em cursos, acessarem materiais didáticos e acompanharem seu progresso. Além disso, será implementado um dashboard de administração para gerenciar cursos, usuários e conteúdo.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
