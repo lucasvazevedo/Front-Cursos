@@ -1,14 +1,46 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+/*
+ * Importacao de modelos de fontes
+ *
+ * */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*
+ * Definicoes de cores primarias, secundarias
+ * e demais cores para a paleta.
+ *
+ * Foi usado o metodo hsl com hue para definir
+ * padroes para visualizacao com mais fluidez
+ *
+ * */
+
+:root {
+  --matiz: 315;
+  --matizAdicional: calc(var(--matiz) + 180);
+  --matizAnalogaDireita: calc(var(--matiz) + 30);
+  --matizAnalogaEsquerda: calc(var(--matiz) - 30);
+  
+  --corPrimaria: hsl(var(--matiz) 25% 95%);
+  --corFundo: hsl(var(--matiz)43% 16%);
+  --corPrimariaDark500: hsl(var(--matiz) 20% 85%);
+  --corPrimariaDark600: hsl(var(--matiz) 20% 75%);
+  --corSecundaria: hsl(var(--matizAdicional) 5% 25%);
+  --corSecundariaLight500: hsl(var(--matizAdicional) 5% 30%);
+  --corSecundariaLight900: hsl(var(--matizAdicional) 5% 95%);
+  --corSecundariaDark500: hsl(var(--matizAdicional) 5% 20%);
+  --realceV1: hsl(var(--matizAnalogaDireita) 40% 40%);
+  --realceV1Claro900: hsl(var(--matizAnalogaDireita) 40% 95%);
+  --realceV2: hsl(var(--matizAnalogaEsquerda) 40% 40%);
+  --realceV2Claro900: hsl(var(--matizAnalogaEsquerda) 40% 90%);
 }
 
+
 body {
-  background-color: #000000;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--corFundo);
+  color: var(--corSecundaria);
   height: 100vh;
   padding: 40px;
+  margin: 0;
 }
 
 .interface {
@@ -20,7 +52,9 @@ body {
   display: flex;
 }
 
-/*Cabeçalho*/
+/*
+ * Cabecalho
+ * */
 
 header {
   padding: 30px 4%;
@@ -121,7 +155,9 @@ p {
   font-style: normal;
 }
 
-/*Estilo do Topo do Site*/
+/*
+ * Estilo do Topo do Site
+ * */
 
 .banner {
   text-align: center;
@@ -134,12 +170,10 @@ p {
   margin: 0 auto;
 }
 
-/*Cadastrar*/
+/*
+ * Cadastrar
+ * */
 
-body{
-  font-family: "Poppins", sans-serif;
-  background-image: rgb(0, 0, 0);
-}
 
 .box{
   display: flex;
@@ -216,14 +250,7 @@ legend{
 
 /*Login*/
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #023047
-}
 
 .page {
   display: flex;
@@ -291,12 +318,8 @@ body {
   font-size: 13px;
   color: #555;
   transition: all linear 160ms;
-}body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #023047
 }
+
 
 .formLogin a:hover {
   color: #38fc08;
