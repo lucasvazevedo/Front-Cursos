@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <!--Chamada a API de fonts do Google-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?display=swap"
-        rel="stylesheet">
+    <!-- 
+      -- alterado o preconnect para o preload conforme a documentacao MDN
+      -- https://developer.mozilla.org/docs/Web/HTML/Element/link#Attributes
+      -- para carregar as fontes e os estilos antes da renderizacao da pagina 
+    -->
+    <link rel="preload" as ="style" href="css/styles.css">
     <title>Curso Script Tech</title>
 </head>
 
