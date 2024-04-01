@@ -4,12 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 
-      -- alterado o preconnect para o preload conforme a documentacao MDN
-      -- https://developer.mozilla.org/docs/Web/HTML/Element/link#Attributes
-      -- para carregar as fontes e os estilos antes da renderizacao da pagina 
-    -->
-    <link rel="preload" as ="style" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Curso Script Tech</title>
 </head>
 
@@ -19,9 +14,7 @@
         <div class="interface">
             <div class="flex">
                 <div class="logo">
-                    <a href="#">
-                        <img src="img/logo-main.png" alt="Logo" title="Logo">
-                    </a>
+                  <img src="img/logo-main.png" alt="Logo" title="Logo">
                 </div><!--logo-->
                 <nav class="menu-desktop">
                     <ul>
@@ -36,15 +29,15 @@
         </div><!--interface-->
     </header>
     <main>
-        <section>
+    <section id="banner">
             <div class="banner">
                 <a href="#">
                     <img src="img/banner.png" alt="Seja um programador" title="Seja um Programador">
                 </a>
             </div><!--benner-->
         </section>
-    </main>
-    <section id="sobre">
+        <br>
+    <section class="areaSection" id="sobre">
         <h2>Sobre</h2>
         <br>
         <p>
@@ -58,7 +51,7 @@
         </p>
     </section><!--Fim de Banner-->
     <br>
-    <section id="curso">
+    <section id="curso" class="areaSection">
         <div>
             <h2>Curso</h2>
             <div class="video-grid">
@@ -71,67 +64,44 @@
         </div>
     </section>
     <br>
-    <section id="cadastro"><!--Inicio do cadastro-->
-            <div class="box">
-                <form action="">
-                    <fieldset>
-                        <h2>
-                            <legend><b>Cadastrar</b></legend>
-                        </h2>
-                        <br>
-                        <div class="inputBox">
-                            <input type="text" name="nome" id="nome" class="inputUser" required>
-                            <label for="nome" class="labelInput">Nome completo</label>
-                        </div>
-                        <br><br>
-                        <div class="inputBox">
-                            <input type="text" name="email" id="email" class="inputUser" required>
-                            <label for="email" class="labelInput">Email</label>
-                        </div>
-                        <br><br>
-                        <div class="inputBox">
-                            <input type="tel" name="telefone" id="telefone" class="inputUser" required>
-                            <label for="telefone" class="labelInput">Telefone</label>
-                        </div>
-                        <p>Sexo:</p>
-                        <input type="radio" id="feminino" name="genero" value="feminino" required>
-                        <label for="feminino">Feminino</label>
-                        <br>
-                        <input type="radio" id="masculino" name="genero" value="masculino" required>
-                        <label for="masculino">Masculino</label>
-                        <br>
-                        <input type="radio" id="outro" name="genero" value="outro" required>
-                        <label for="outro">Outro</label>
-                        <br><br>
-                        <label for="data_nascimento"><b>Data de Nascimento:</b></label>
-                        <input type="date" name="data_nascimento" id="data_nascimento" required>
-                        <br><br><br>
-                        <input type="submit" name="submit" id="submit">
-                    </fieldset>
-                </form>
-            </div>
-    </section><!--Fim de Cadastro-->
-    <br>
-    <section id="login"><!--Incio de Login-->
-        <div class="page">
-            <form method="POST" class="formLogin">
-                <h1>Login</h1>
+    <!-- Inicio cadastro -->
+    <section id="login" class="areaSection">
+      <h2>Cadastro</h2>
+        <div class="pageForm">
+            <form method="POST">
+                <p>Digite os seus dados para cadastro abaixo:</p>
+                <label for="name">Nome</label>
+                <input type="text" placeholder="Digite seu nome" autofocus="true" />
+                <label for="email">E-mail</label>
+                <input type="email" placeholder="Digite seu e-mail" autofocus="true" />
+                <label for="text">WhatsApp</label>
+                <input type="text" placeholder="Digite seu telefone" />
+                <input type="submit" value="Cadastrar" class="btn" />
+            </form>
+        </div> 
+        <!--Fim de Cadastro-->
+    </section>
+    <br />
+    <!--Incio de Login-->
+    <section id="login" class="areaSection">
+      <h2>Login</h2>
+        <div class="pageForm">
+            <form method="POST">
                 <p>Digite os seus dados de acesso no campo abaixo.</p>
                 <label for="email">E-mail</label>
                 <input type="email" placeholder="Digite seu e-mail" autofocus="true" />
                 <label for="password">Senha</label>
-                <input type="password" placeholder="Digite seu e-mail" />
+                <input type="password" placeholder="Digite sua senha" />
                 <a href="/">Esqueci minha senha</a>
                 <input type="submit" value="Acessar" class="btn" />
             </form>
         </div> <!--Fim de Login-->
-
     </section>
-
+    <br/>
     <section id="comentarios">
-
     </section>
 
+</main>
     <footer>
         <!-- Rodapé -->
         <p>&copy; 2024 Script Tech. Todos os direitos reservados.</p>
