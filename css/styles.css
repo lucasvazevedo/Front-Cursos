@@ -1,117 +1,151 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+/*
+ * Importacao de modelos de fontes
+ *
+ * */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*
+ * Definicoes de cores primarias, secundarias
+ * e demais cores para a paleta.
+ *
+ * Foi usado o metodo hsl com hue para definir
+ * padroes para visualizacao com mais fluidez
+ *
+ * */
+
+:root {
+
+  /*
+   * Variaiveis de cores
+   * */
+  --matiz: 315;
+  --matizAdicional: calc(var(--matiz) + 180);
+  --matizAnalogaDireita: calc(var(--matiz) + 17);
+  --matizAnalogaEsquerda: calc(var(--matiz) - 70);
+  
+  --corPrimaria: hsl(var(--matiz) 25% 95%);
+  --corPrimariaEscuro500: hsl(var(--matiz) 20% 85%);
+  --corPrimariaEscuro600: hsl(var(--matiz) 20% 75%);
+  --corSecundaria: hsl(var(--matizAdicional) 5% 25%);
+  --corSecundariaIluminado500: hsl(var(--matizAdicional) 5% 30%);
+  --corSecundariaIluminado900: hsl(var(--matizAdicional) 5% 95%);
+  --corSecundariaEscuro500: hsl(var(--matizAdicional) 5% 20%);
+  --realceV1: hsl(var(--matizAnalogaDireita) 48% 24%);
+  --realceV1Claro900: hsl(var(--matizAnalogaDireita) 40% 95%);
+  --realceV2: hsl(var(--matizAnalogaEsquerda) 48% 24%);
+  --realceV2Claro900: hsl(var(--matizAnalogaEsquerda) 40% 90%);
+
+  /*
+   * definicoes de cores padrao
+   * */
+  --corTexto: var(--corPrimaria);
+  --corFundo: hsl(var(--matiz) 43% 95%);
+  --sombra: rgba(0, 0, 0, 0.4);
+
+  /*
+   * Variaveis para menu responsivo
+   * */
+  --header-interface-height: 110px;
+  --header-flex-height: 70px;
+  --header-height-diferenca: calc(
+    var(--header-interface-height) -
+    var(--header-flex-height)
+  );
 }
 
 body {
-  background-color: #000000;
-  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--corFundo);
   padding: 40px;
+  margin: 0;
 }
 
-.interface {
-  max-width: 1280px;
-  margin: 1 auto;
-}
-
-.flex {
+.areaSection {
   display: flex;
+  line-height: 45px;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  background-color: var(--realceV2);
+  font-size: 25px;
+  border-radius: 30px;
+
+  h2 {
+    color: var(--corTexto);
+  }
+  
+  p {
+    text-align: center;
+    color: var(--corTexto);
+    max-height: 500px;
+    line-height: 45px;
+    padding: 0 30px;
+    justify-content: center;
+    text-indent: 40px;
+  }
 }
 
-/*Cabeçalho*/
+/*
+ * Cabecalho (header)
+ * */
 
 header {
   padding: 30px 4%;
-}
+/* Definicoes de subgrupoes dentro da tag header*/
 
-header>.interface {
+ .interface {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
+  }
 
-header a {
-  color: #ffffff;
+  .flex {
+    display: flex;
+  }
+
+ a {
+  color: var(--corTexto);
   font-size: 20px;
   text-decoration: none;
   display: inline-block;
   transition: .2s;
   border-radius: 40px;
+  }
 
-}
-
-
-header a:hover {
-  color: #ffffff;
+ a:hover {
+  color: var(--corPrimariaEscuro500);
   transform: scale(1.20);
+ }
 
-}
+ img {
+   width: 70%;
+ }
 
-header nav ul {
-  list-style-type: none;
-  padding-left: 10rem;
-  padding-top: 6rem;
-}
+/*
+ * Classes do menu de navegacao
+ * */
+ nav {
+   ul {
+     list-style-type: none;
+     padding-left: 10rem;
+     padding-top: 6rem;
 
-header nav ul li {
-  display: inline-block;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  font-size: 5%;
-  font-weight: 300px;
-  border-radius: 20px;
-}
-
-#title {
-  flex-direction: columiamgesn;
-  line-height: 10px;
-}
-
-li {
-  display: inline-block;
-  margin: 1rem;
-  background-color: #19094F;
-  border: 0;
-  cursor: pointer;
-}
-
-#curso {
-  display: flex;
-  line-height: 45px;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 50px;
-  background-color: #19094F;
-  color: #48FF13;
-  font-size: 25px;
-  border-radius: 30px;
-}
-
-#sobre {
-  display: flex;
-  line-height: 45px;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 50px;
-  background-color: #19094F;
-  color: #48FF13;
-  font-size: 25px;
-  border-radius: 30px;
-}
-
-p {
-  text-align: center;
-  max-height: 500px;
-  line-height: 45px;
-  padding: 0 30px;
-  justify-content: center;
-  text-indent: 40px;
+     li {
+       display: inline-block;
+       padding-left: 2rem;
+       padding-right: 2rem;
+       padding-top: 1rem;
+       padding-bottom: 1rem;
+       font-size: 5%;
+       font-weight: 300px;
+       border-radius: 20px;
+       margin: 1rem;
+       background-color: var(--realceV2);
+       border: 0;
+       cursor: pointer;
+     }
+   }
+ }
 }
 
 .public-sans {
@@ -121,207 +155,110 @@ p {
   font-style: normal;
 }
 
-/*Estilo do Topo do Site*/
+/*
+ * Estilo do Topo do Site
+ * */
 
 .banner {
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  img {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
-.banner img {
-  display: block;
-  margin: 0 auto;
-}
+/*
+ * Cadastro e login
+ * */
 
-/*Cadastrar*/
-
-body{
-  font-family: "Poppins", sans-serif;
-  background-image: rgb(0, 0, 0);
-}
-
-.box{
+.pageForm {
   display: flex;
   flex-direction: column;
   align-items: center;
   align-content: center;
   justify-content: center;
   width: 100%;
-  height: 100vh;
-  background-color: #19094F;15
-  border-radius: 25px;
-}
-
-legend{
-  border: 1px solid rgb(9, 255, 0);
-  padding: 10px;
-  text-align: center;
-  background-color: #51ff00;
-  border-radius: 8px;n
-}
-
-.inputBox{
-  position: relative;
-}
-
-.inputUser{
-  background: none;
-  border: none;
-  border-bottom: 1px solid rgb(255, 255, 255);
-  outline: none;
-  color: rgb(0, 0, 0);
-  font-size: 35px;
-  width: 100%;
-  letter-spacing: 2px;
-}
-
-.labelInput{
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  pointer-events: none;
-  transition: .5s;
-}
-
-.inputUser:focus ~ .labelInput,
-.inputUser:valid ~ .labelInput{
-  top: -20px;
-  font-size: 20px;
-  color: rgb(0, 255, 47);
-}
-
-#data_nascimento{
-  border: none;
-  padding: 8px;
-  border-radius: 10px;
-  outline: none;
-  font-size: 15px;
-}
-
-#submit{
-  background-image: linear-gradient(to right,#62e511, rgb(71, 101, 199));
-  width: 100%;
-  border: none;
-  padding: 15px;
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-  cursor: pointer;
-  border-radius: 10px;
-}
-
-#submit:hover{
-  background-image: linear-gradient(to right,rgb(0, 255, 0), rgb(34, 255, 0));
-}
-
-/*Login*/
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #023047
-}
-
-.page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-  background-color: #19094F;
+  background-color: var(--realceV2);
   border-radius: 30px;
-}
+  img {
+    width: 420px;
+  }
+/*
+ * Estilos de formularios
+ * */
 
-.formLogin {
+  form {
   display: flex;
   flex-direction: column;
-  background-color: #fff;
+  background-color: var(--realceV1Claro900);
   border-radius: 7px;
   padding: 40px;
-  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
-  gap: 5px
+  box-shadow: 10px 10px 40px var(--sombra);
+  gap: 5px;
+    h1 {
+       padding: 0;
+       margin: 0;
+       font-weight: 500;
+       font-size: 2.3em;
+       color: var(--corSecundaria);
+    }
+    p {
+       display: inline-block;
+       font-size: 14px;
+       color: var(--corSecundaria);
+       margin-bottom: 25px;
+    }
+    input {
+       padding: 15px;
+       font-size: 14px;
+       border: 1px solid var(--corPrimariaEscuro500);
+       margin-bottom: 20px;
+       margin-top: 5px;
+       border-radius: 4px;
+       transition: all linear 160ms;
+       outline: none;
+    }
+    input:focus {
+      border: 1px solid var(--corPrimariaEscuro600);
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    a {
+      display: inline-block;
+      margin-bottom: 20px;
+      font-size: 13px;
+      color: var(--corSecundaria);
+      transition: all linear 160ms;
+    }
+    a:hover {
+      color: var(--corSecundariaEscuro500);
+    }
+    .btn {
+      background-color: var(--realceV2);
+      color: var(--realceV2Claro900);
+      font-size: 14px;
+      font-weight: 600;
+      border: none !important;
+      transition: all linear 160ms;
+      cursor: pointer;
+      margin: 0 !important;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      background-color: var(--realceV1);
+    }
+  }
 }
 
-.areaLogin img {
-  width: 420px;
-}
-
-.formLogin h1 {
-  padding: 0;
-  margin: 0;
-  font-weight: 500;
-  font-size: 2.3em;
-}
-
-.formLogin p {
-  display: inline-block;
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 25px;
-}
-
-.formLogin input {
-  padding: 15px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  margin-bottom: 20px;
-  margin-top: 5px;
-  border-radius: 4px;
-  transition: all linear 160ms;
-  outline: none;
-}
-
-.formLogin input:focus {
-  border: 1px solid #04fc25;
-}
-
-.formLogin label {
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.formLogin a {
-  display: inline-block;
-  margin-bottom: 20px;
-  font-size: 13px;
-  color: #555;
-  transition: all linear 160ms;
-}body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #023047
-}
-
-.formLogin a:hover {
-  color: #38fc08;
-}
-
-.btn {
-  background-color: #37f725;
-  color: #000000;
-  font-size: 14px;
-  font-weight: 600;
-  border: none !important;
-  transition: all linear 160ms;
-  cursor: pointer;
-  margin: 0 !important;
-
-}
-
-.btn:hover {
-  transform: scale(1.05);
-  background-color: #1bff06;
-
-}
-
-/*Estilo do footer do Site*/
+/*
+ * Estilo do footer do Site
+ * */
 
 footer {
-  color: #ffffff;
+  color: var(--realceV2Claro900);
 }
