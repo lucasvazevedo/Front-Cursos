@@ -6,13 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./css/styles.css" rel="stylesheet">
     <style>
+   body {
+    font: 1em/160% Verdana, sans-serif!important;
+    background-color: var(--corPrimaria)!important;
+    color: var(--corSecundaria)!important;
+}
     a {
-    color: var(--accentV1);
+    color: var(--realceV1);
 
     &:focus,
     &:hover,
     &:active {
-    color: var(--accentV2);
+    color: var(--realceV2);
     }
   }
 
@@ -31,7 +36,7 @@ h4 {
   margin-bottom: 1.5rem;
   font-weight: bold;
   font-family: Verdana, sans-serif;
-  color: var(--secondaryDark500);
+  color: var(--corSecundariaEscuro500);
 }
 
 h1 {
@@ -63,29 +68,29 @@ h3 {
 
 .cp-grid-label {
   font-size: 0.75em;
-  font-family: Nunito, sans-serif;
+  font-family: Arial, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: var(--secondaryLight500);
+  color: var(--corSecundariaIluminado500);
 }
 
 .cp-widget {
   &:not(:last-child) {
     padding-bottom: 2em;
-    border-bottom: 1px solid var(--primaryDark500);
+    border-bottom: 1px solid var(--corPrimariaEscuro500);
   }
 }
 
 .cp-box {
   padding: 1.5em;
-  background-color: var(--primaryDark500);
-  border: 1px solid var(--primaryDark600);
+  background-color: var(--corPrimariaEscuro500);
+  border: 1px solid var(--corPrimariaEscuro600);
   border-radius: 0.25em;
 
   &.cp-box--dark {
-    background-color: var(--secondaryLight500);
-    color: var(--secondaryLight900);
-    border: 1px solid var(--secondary);
+    background-color: var(--corSecundariaIluminado500);
+    color: var(--corSecundariaIluminado900);
+    border: 1px solid var(--corSecundaria);
   }
 }
 
@@ -93,39 +98,55 @@ h3 {
   padding: 1em 1.5em;
   display: inline-flex;
   margin: 1em 0;
-  background-color: var(--accentV1);
-  color: var(--accentV1Light900);
+  background-color: var(--realceV1);
+  color: var(--realceV1Claro900);
   border-radius: 0.25em;
   text-decoration: none;
   &:hover,
   &:focus,
   &:active {
-    background-color: var(--accentV2);
-    color: var(--accentV2Light900);
+    background-color: var(--realceV2);
+    color: var(--realceV2Claro900);
+  }
+}
+
+.cp-btn2 {
+  padding: 1em 1.5em;
+  display: inline-flex;
+  margin: 1em 0;
+  background-color: var(--realceV2);
+  color: var(--realceV2Claro900);
+  border-radius: 0.25em;
+  text-decoration: none;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--realceV1);
+    color: var(--realceV1Claro900);
   }
 }
 
 #swatches {
   padding: 0.25em;
-  border: 1px solid var(--primaryDark500);
+  border: 1px solid var(--corPrimariaEscuro500);
   border-radius: 0.25em;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
 
   div {
-    height: 30px;
+    height: 60px;
     
-    &:nth-child(1n) { background-color: var(--primary) }
-    &:nth-child(2n) { background-color: var(--primaryDark500) }
-    &:nth-child(3n) { background-color: var(--primaryDark600) }
-    &:nth-child(4n) { background-color: var(--secondary) }
-    &:nth-child(5n) { background-color: var(--secondaryLight500) }
-    &:nth-child(6n) { background-color: var(--secondaryLight900) }
-    &:nth-child(7n) { background-color: var(--secondaryDark500) }
-    &:nth-child(8n) { background-color: var(--accentV1) }
-    &:nth-child(9n) { background-color: var(--accentV1Light900) }
-    &:nth-child(10n) { background-color: var(--accentV2) }
-    &:nth-child(11n) { background-color: var(--accentV2Light900) }
+    &:nth-child(1n) { background-color: var(--corPrimaria) }
+    &:nth-child(2n) { background-color: var(--corPrimariaEscuro500) }
+    &:nth-child(3n) { background-color: var(--corPrimariaEscuro600) }
+    &:nth-child(4n) { background-color: var(--corSecundaria) }
+    &:nth-child(5n) { background-color: var(--corSecundariaIluminado500) }
+    &:nth-child(6n) { background-color: var(--corSecundariaIluminado900) }
+    &:nth-child(7n) { background-color: var(--corSecundariaEscuro500) }
+    &:nth-child(8n) { background-color: var(--realceV1) }
+    &:nth-child(9n) { background-color: var(--realceV1Claro900) }
+    &:nth-child(10n) { background-color: var(--realceV2) }
+    &:nth-child(11n) { background-color: var(--realceV2Claro900) }
   }
 }
     </style>
@@ -160,9 +181,20 @@ h3 {
       <p class="cp-box cp-box--dark">Outro elemento de caixa temático utilizando variações da cor secundária.</p>
 
       <a href="#" class="cp-btn">Exemplo de um Botão</a>
+      <a href="#" class="cp-btn2">Exemplo de um Botao invertido</a>
     </div>
   </div>
 </div>
 </div>
+<script>
+  const addSwatches = (parent, totalSwatches) => {
+  while(totalSwatches > 0) {
+    parent.appendChild(document.createElement("div"))
+    totalSwatches--
+  }
+}
+
+addSwatches(document.querySelector("#swatches"), 11);
+</script>
   </body>
 </html>
