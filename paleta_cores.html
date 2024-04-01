@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./css/styles.css" rel="stylesheet">
+    <style>
+    a {
+    color: var(--accentV1);
+
+    &:focus,
+    &:hover,
+    &:active {
+    color: var(--accentV2);
+    }
+  }
+
+p {
+  &:not(:last-child) {
+    margin-bottom: 1.5em;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 120%;
+  margin-top: 1.5em;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  font-family: Verdana, sans-serif;
+  color: var(--secondaryDark500);
+}
+
+h1 {
+  font-size: 160%;
+}
+h2 {
+  font-size: 140%;
+}
+h3 {
+  font-size: 120%;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 600px;
+  padding: 2em;
+}
+
+.cp-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 2em;
+}
+
+.cp-grid-col-full {
+  grid-column: 1 / 3;
+}
+
+.cp-grid-label {
+  font-size: 0.75em;
+  font-family: Nunito, sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--secondaryLight500);
+}
+
+.cp-widget {
+  &:not(:last-child) {
+    padding-bottom: 2em;
+    border-bottom: 1px solid var(--primaryDark500);
+  }
+}
+
+.cp-box {
+  padding: 1.5em;
+  background-color: var(--primaryDark500);
+  border: 1px solid var(--primaryDark600);
+  border-radius: 0.25em;
+
+  &.cp-box--dark {
+    background-color: var(--secondaryLight500);
+    color: var(--secondaryLight900);
+    border: 1px solid var(--secondary);
+  }
+}
+
+.cp-btn {
+  padding: 1em 1.5em;
+  display: inline-flex;
+  margin: 1em 0;
+  background-color: var(--accentV1);
+  color: var(--accentV1Light900);
+  border-radius: 0.25em;
+  text-decoration: none;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--accentV2);
+    color: var(--accentV2Light900);
+  }
+}
+
+#swatches {
+  padding: 0.25em;
+  border: 1px solid var(--primaryDark500);
+  border-radius: 0.25em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+
+  div {
+    height: 30px;
+    
+    &:nth-child(1n) { background-color: var(--primary) }
+    &:nth-child(2n) { background-color: var(--primaryDark500) }
+    &:nth-child(3n) { background-color: var(--primaryDark600) }
+    &:nth-child(4n) { background-color: var(--secondary) }
+    &:nth-child(5n) { background-color: var(--secondaryLight500) }
+    &:nth-child(6n) { background-color: var(--secondaryLight900) }
+    &:nth-child(7n) { background-color: var(--secondaryDark500) }
+    &:nth-child(8n) { background-color: var(--accentV1) }
+    &:nth-child(9n) { background-color: var(--accentV1Light900) }
+    &:nth-child(10n) { background-color: var(--accentV2) }
+    &:nth-child(11n) { background-color: var(--accentV2Light900) }
+  }
+}
+    </style>
+  </head>
+  <body>
+  <div class="container">
+  <h2>Paleta de Cores</h2>
+  <div class="cp-grid">
+    <div class="cp-widget cp-grid-col-full">
+      <p>As cores da página está distribuida usando a razão de 60/30/10 e estão divididas em três categorias: corPrimaria, corSecundaria e Realces. Para prover estas variedades, as categorias de cores foram gerados em diferentes paletas:</p>
+    </div>
+    <div class="cp-widget cp-grid-col-full">
+      <div id="swatches"></div>
+    </div>
+    <div><span class="cp-grid-label">Cor Primaria</span></div>
+    <div class="cp-widget">
+      <p>O plano de fundo do body desta página assume a cor primária que cobre quase 60% de UI total.</p>
+    </div>
+    <div><span class="cp-grid-label">Cor Secundária</span></div>
+    <div class="cp-widget">
+      <p>Um exemplo de parágrafo demonstrando a cor padrão do texto do corpo (body). Qualquer estilo que não carregue ou herde qualquer estilo de cor de texto será mostrado nesta cor por padrão.</p>
+    </div>
+    <div><span class="cp-grid-label">Cor de Realce</span></div>
+    <div class="cp-widget">
+      <p>A cor de destaque constitui cerca de 10% dos detalhes pequenos, mas vitais, de uma IU baseada na regra 60/30/10. Os <a href="#">Hiperlinks</a> são o exemplo mais comum de uso de realce.</p>
+    </div>
+    <div><span class="cp-grid-label">Playground</span></div>
+    <div class="cp-widget">
+      <p>Este simples elemento de parágrafo regular que adota a cor secundária por padrão.</p>
+      <p class="fade-1">Agora este é um fragmento de texto com um tom mais claro da cor secundária. Ele é gerado usando a mesma matiz da cor secundária, mas ajustando a saturação e a luminosidade.</p>
+      <p class="cp-box">Um elemento realçado em forma de caixa que usa variações da cor primária como plano de fundo e borda.</p>
+      <p class="cp-box cp-box--dark">Outro elemento de caixa temático utilizando variações da cor secundária.</p>
+
+      <a href="#" class="cp-btn">Exemplo de um Botão</a>
+    </div>
+  </div>
+</div>
+</div>
+  </body>
+</html>
