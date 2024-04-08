@@ -22,7 +22,7 @@
                         <li><a href="#curso">Curso</a></li>
                         <li><a href="#cadastro">Cadastro</a></li>
                         <li><a href="#login">Login</a></li>
-                        <li><a href="#comentarios">Blog</a></li>
+                        <li><a href="#contado">Contato</a></li>
                     </ul>
                 </nav>
             </div>
@@ -121,9 +121,21 @@
             </div> <!--Fim de Login-->
         </section>
         <br />
-        <section id="comentarios">
+        <!--Incio de Contato-->
+        <section id="contato" class="areaSection">
+            <h2>Contato</h2>
+            <div class="pageForm">
+                <form method="POST">
+                    <label>Nome</label>
+                    <input type="text" name="name" placeholder="Digite seu nome" autocomplete="off" required>
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="Digite seu email" autocomplete="off" required>
+                    <label>Mensagem</label>
+                    <textarea name="message" cols="30" rows="10" placeholder="Digite sua mensagem" required></textarea>
+                    <input type="submit" value="Enviar" class="btn" />
+                </form>
+            </div> <!--Fim de Contato-->
         </section>
-
     </main>
     <footer>
         <!-- Rodapé -->
