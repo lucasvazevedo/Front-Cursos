@@ -317,6 +317,13 @@ footer {
 
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 14%;
+  margin-right: 14%;
+}
+
 .column{
   float: left;
   width: 30%;
@@ -325,6 +332,7 @@ footer {
   padding-top: 10px;
   padding-bottom: 10px;
  }
+ 
 .row:after{
   content: "";
   display: table;
