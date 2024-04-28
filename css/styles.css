@@ -64,7 +64,6 @@ body {
   display: flex;
   line-height: 25px;
   flex-direction: column;
-  align-items: center;
   padding: 50px;
   background-color: var(--realceV2);
   font-size: 25px;
@@ -320,15 +319,16 @@ footer {
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 14%;
-  margin-right: 14%;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-left: 10%;
 }
 
 .column{
   float: left;
   width: 30%;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
  }
@@ -378,4 +378,9 @@ footer {
 }
 .btn:hover{
    border-radius: 16px;
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
 }
