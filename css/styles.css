@@ -22,7 +22,7 @@
   --matizAdicional: calc(var(--matiz) + 180);
   --matizAnalogaDireita: calc(var(--matiz) + 17);
   --matizAnalogaEsquerda: calc(var(--matiz) - 70);
-  
+
   --corPrimaria: hsl(var(--matiz) 25% 95%);
   --corPrimariaEscuro500: hsl(var(--matiz) 20% 85%);
   --corPrimariaEscuro600: hsl(var(--matiz) 20% 75%);
@@ -47,10 +47,7 @@
    * */
   --header-interface-height: 110px;
   --header-flex-height: 70px;
-  --header-height-diferenca: calc(
-    var(--header-interface-height) -
-    var(--header-flex-height)
-  );
+  --header-height-diferenca: calc(var(--header-interface-height) - var(--header-flex-height));
 }
 
 body {
@@ -72,7 +69,7 @@ body {
   h2 {
     color: var(--corTexto);
   }
-  
+
   p {
     text-align: center;
     color: var(--corTexto);
@@ -90,61 +87,61 @@ body {
 
 header {
   padding: 30px 4%;
-/* Definicoes de subgrupoes dentro da tag header*/
+  /* Definicoes de subgrupoes dentro da tag header*/
 
- .interface {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .flex {
     display: flex;
   }
 
- a {
-  color: var(--corTexto);
-  font-size: 20px;
-  text-decoration: none;
-  display: inline-block;
-  transition: .2s;
-  border-radius: 40px;
+  a {
+    color: var(--corTexto);
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+    border-radius: 40px;
   }
 
- a:hover {
-  color: var(--corPrimariaEscuro500);
-  transform: scale(1.20);
- }
+  a:hover {
+    color: var(--corPrimariaEscuro500);
+    transform: scale(1.20);
+  }
 
- img {
-   width: 70%;
- }
+  img {
+    width: 70%;
+  }
 
-/*
+  /*
  * Classes do menu de navegacao
  * */
- nav {
-   ul {
-     list-style-type: none;
-     padding-left: 10rem;
-     padding-top: 6rem;
+  nav {
+    ul {
+      list-style-type: none;
+      padding-left: 10rem;
+      padding-top: 6rem;
 
-     li {
-       display: inline-block;
-       padding-left: 2rem;
-       padding-right: 2rem;
-       padding-top: 1rem;
-       padding-bottom: 1rem;
-       font-size: 5%;
-       font-weight: 300px;
-       border-radius: 20px;
-       margin: 1rem;
-       background-color: var(--realceV2);
-       border: 0;
-       cursor: pointer;
-     }
-   }
- }
+      li {
+        display: inline-block;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 5%;
+        font-weight: 300px;
+        border-radius: 20px;
+        margin: 1rem;
+        background-color: var(--realceV2);
+        border: 0;
+        cursor: pointer;
+      }
+    }
+  }
 }
 
 .public-sans {
@@ -162,6 +159,7 @@ header {
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
+
   img {
     display: block;
     margin: 0 auto;
@@ -181,45 +179,51 @@ header {
   width: 100%;
   background-color: var(--realceV2);
   border-radius: 30px;
+
   img {
     width: 420px;
   }
-/*
+
+  /*
  * Estilos de formularios - as caixas
  * */
 
   form {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--realceV1Claro900);
-  border-radius: 7px;
-  padding: 10px 45px;
-  box-shadow: 10px 10px 40px var(--sombra);
-  gap: 5px;
-  width: 35%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--realceV1Claro900);
+    border-radius: 7px;
+    padding: 10px 45px;
+    box-shadow: 10px 10px 40px var(--sombra);
+    gap: 5px;
+    width: 35%;
+
     h1 {
-       padding: 0;
-       margin: 0;
-       font-weight: 500;
-       font-size: 2.3em;
-       color: var(--corSecundaria);
+      padding: 0;
+      margin: 0;
+      font-weight: 500;
+      font-size: 2.3em;
+      color: var(--corSecundaria);
     }
+
     p {
-       display: inline-block;
-       font-size: 14px;
-       color: var(--corSecundaria);
-       margin-bottom: 25px;
+      display: inline-block;
+      font-size: 14px;
+      color: var(--corSecundaria);
+      margin-bottom: 25px;
     }
+
     input {
-       padding: 15px;
-       font-size: 14px;
-       border: 1px solid var(--corPrimariaEscuro500);
-       margin-bottom: 20px;
-       margin-top: 5px;
-       border-radius: 4px;
-       transition: all linear 160ms;
-       outline: none;
+      padding: 15px;
+      font-size: 14px;
+      border: 1px solid var(--corPrimariaEscuro500);
+      margin-bottom: 20px;
+      margin-top: 5px;
+      border-radius: 4px;
+      transition: all linear 160ms;
+      outline: none;
     }
+
     input:focus {
       border: 1px solid var(--corPrimariaEscuro600);
     }
@@ -228,6 +232,7 @@ header {
       font-size: 14px;
       font-weight: 600;
     }
+
     a {
       display: inline-block;
       margin-bottom: 20px;
@@ -235,9 +240,11 @@ header {
       color: var(--corSecundaria);
       transition: all linear 160ms;
     }
+
     a:hover {
       color: var(--corSecundariaEscuro500);
     }
+
     .btn {
       background-color: var(--realceV2);
       color: var(--realceV2Claro900);
@@ -248,6 +255,7 @@ header {
       cursor: pointer;
       margin: 0 !important;
     }
+
     .btn:hover {
       transform: scale(1.05);
       background-color: var(--realceV1);
@@ -271,45 +279,54 @@ footer {
   border-radius: 15px;
   padding: 20px;
 }
-  
-  .btn {
-    background-color: var(--realceV2);
-    color: var(--realceV2Claro900);
-    font-size: 14px;
-    font-weight: 600;
-    border: none !important;
-    transition: all linear 160ms;
-    cursor: pointer;
-    margin: 0 !important;
+
+.btn {
+  background-color: var(--realceV2);
+  color: var(--realceV2Claro900);
+  font-size: 14px;
+  font-weight: 600;
+  border: none !important;
+  transition: all linear 160ms;
+  cursor: pointer;
+  margin: 0 !important;
+  width: 100%;
+  border-radius: 3px;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background-color: var(--realceV1);
+
+  .pageForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
     width: 100%;
-    border-radius: 3px;
+    background-color: var(--realceV2);
+    border-radius: 30px;
+
+    img {
+      width: 420px;
+    }
   }
-  .btn:hover {
-    transform: scale(1.05);
-    background-color: var(--realceV1);.pageForm {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      align-content: center;
-      justify-content: center;
-      width: 100%;
-      background-color: var(--realceV2);
-      border-radius: 30px;
-      img {
-        width: 420px;
-      }
-  }
+
   h1 {
     font-size: 17px;
   }
+
   h2 {
     font-size: 8px;
     color: black;
   }
-  img{
+
+  img {
     width: 250px;
     height: 150px;
     text-align: center;
+    transition: all linear 160ms;
+    cursor: pointer;
     margin-left: auto;
     margin-right: auto;
   }
@@ -324,33 +341,33 @@ footer {
   padding-left: 10%;
 }
 
-.column{
+.column {
   float: left;
   width: 30%;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
- }
- 
-.row:after{
+}
+
+.row:after {
   content: "";
   display: table;
   clear: both;
 }
 
-.lcs_H1{
+.lcs_H1 {
   color: black !important;
   font-size: 20px;
 }
 
-.lcs_H2{
+.lcs_H2 {
   color: black !important;
   font-size: 15px;
 }
 
 /*Página de Obrigado*/
-.main{
+.main {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -358,16 +375,19 @@ footer {
   background: #101026;
   flex-direction: column;
 }
-.text{
+
+.text {
   font-size: 45px;
   color: #f5f5f5;
   margin-bottom: 30px;
 }
-.paragrafo{
+
+.paragrafo {
   color: #f5f5f5;
   margin-bottom: 50px;
 }
-.btn{
+
+.obrigadoContato {
   padding: 15px 55px;
   background: #f5f5f5;
   text-decoration: none;
@@ -376,8 +396,9 @@ footer {
   transition: all 0.5s;
   text-align: center;
 }
-.btn:hover{
-   border-radius: 16px;
+
+.btn:hover {
+  border-radius: 16px;
 }
 
 .swiper {
