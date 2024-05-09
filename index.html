@@ -31,13 +31,42 @@
     </header>
     <main>
         <!--Inicio do Banner-->
-        <section id="banner">
-            <div class="banner">
-                <a href="#">
-                    <img src="img/banner.png" alt="Seja um programador" title="Seja um Programador">
-                </a>
+        <div class="carousel">
+            <button class="prev-btn">Anterior</button>
+            <div class="carousel-inner">
+                <img src="img/c1.jpeg" alt="Image 1">
+                <img src="img/c2.jpeg" alt="Image 2">
+                <img src="img/c3.png" alt="Image 3">
+                <img src="img/c4.png" alt="Image 4">
+                <img src="img/c5.png" alt="Image 5">
+                <img src="img/c6.jpeg" alt="Image 6">
             </div>
-        </section><!--Fim de Banner-->
+            <button class="next-btn">Próximo</button>
+        </div>
+        <script>
+            const carousel = document.querySelector('.carousel');
+            const carouselInner = carousel.querySelector('.carousel-inner');
+            const prevBtn = carousel.querySelector('.prev-btn');
+            const nextBtn = carousel.querySelector('.next-btn');
+            const images = carouselInner.querySelectorAll('img');
+            let index = 0;
+
+            function showImage(index) {
+                const imageWidth = images[index].offsetWidth;
+                const translateValue = -(index * (imageWidth + 16)); // Considerando a largura da imagem e a margem
+                carouselInner.style.transform = `translateX(${translateValue}px)`;
+            }
+
+            prevBtn.addEventListener('click', () => {
+                index = index > 0 ? index - 1 : images.length - 1;
+                showImage(index);
+            });
+
+            nextBtn.addEventListener('click', () => {
+                index = index < images.length - 1 ? index + 1 : 0; // Voltar para a primeira imagem se for a última
+                showImage(index);
+            });
+        </script>
         <br>
         <!--Inicio do Sobre-->
         <section class="areaSection" id="sobre">
@@ -59,12 +88,11 @@
             <div class="row">
                 <div class="column">
                     <div class="card">
-                        <img src="img/thumb1.png">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/8mei6uVttho"
+                            frameborder="0" allowfullscreen></iframe>
                         <div>
                             <h1 class="lcs_H1">Introdução a Algorítmos</h1>
                             <h2 class="lcs_H2">Conceitos básicos para a algorítmos</h2>
-                            <button class="btn"
-                                onclick="window.open('https://www.youtube.com/watch?v=8mei6uVttho&list=PLHz_AreHm4dmSj0MHol_aoNYCSGFqvfXV', '_blank')">Acessar</button>
                         </div>
                     </div>
                 </div>
@@ -295,7 +323,8 @@
                     <input type="submit" value="Acessar" class="btn" />
 
                     <input type="hidden" name="accessKey" value="24ddb5cd-7ae9-41ea-8e14-e95efd2c713b">
-                    <input type="hidden" name="redirectTo" value="https://lucasvazevedo.github.io/Script-Tech/obrigado.html">
+                    <input type="hidden" name="redirectTo"
+                        value="https://lucasvazevedo.github.io/Script-Tech/obrigado.html">
                 </form>
             </div>
         </section><!--Fim de Contato-->
