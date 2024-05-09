@@ -196,7 +196,7 @@ header {
     padding: 10px 45px;
     box-shadow: 10px 10px 40px var(--sombra);
     gap: 5px;
-    width: 35%;
+    width: 30%;
 
     h1 {
       padding: 0;
@@ -277,13 +277,13 @@ footer {
   width: 300px;
   background-color: var(--corPrimaria);
   border-radius: 15px;
-  padding: 20px;
+  padding: 30px;
 }
 
 .btn {
   background-color: var(--realceV2);
   color: var(--realceV2Claro900);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   border: none !important;
   transition: all linear 160ms;
