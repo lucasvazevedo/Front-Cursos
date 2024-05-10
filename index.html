@@ -32,40 +32,37 @@
     <main>
         <!--Inicio do Banner-->
         <div class="carousel">
-            <button class="prev-btn">Anterior</button>
-            <div class="carousel-inner">
+            <div class="carousel__item">
                 <img src="img/c1.jpeg" alt="Image 1">
+            </div>
+            <div class="carousel__item">
                 <img src="img/c2.jpeg" alt="Image 2">
+            </div>
+            <div class="carousel__item">
                 <img src="img/c3.png" alt="Image 3">
+            </div>
+            <div class="carousel__item">
                 <img src="img/c4.png" alt="Image 4">
+            </div>
+            <div class="carousel__item">
                 <img src="img/c5.png" alt="Image 5">
+            </div>
+            <div class="carousel__item">
                 <img src="img/c6.jpeg" alt="Image 6">
             </div>
-            <button class="next-btn">Próximo</button>
         </div>
         <script>
-            const carousel = document.querySelector('.carousel');
-            const carouselInner = carousel.querySelector('.carousel-inner');
-            const prevBtn = carousel.querySelector('.prev-btn');
-            const nextBtn = carousel.querySelector('.next-btn');
-            const images = carouselInner.querySelectorAll('img');
-            let index = 0;
-
-            function showImage(index) {
-                const imageWidth = images[index].offsetWidth;
-                const translateValue = -(index * (imageWidth + 16)); // Considerando a largura da imagem e a margem
-                carouselInner.style.transform = `translateX(${translateValue}px)`;
+            // Função para mover para o próximo slide
+            function nextSlide() {
+                const carousel = document.querySelector('.carousel');
+                carousel.scrollLeft += carousel.clientWidth; // Move para o próximo slide
+                if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth) {
+                    carousel.scrollLeft = 0; // Volta para o primeiro slide se estiver no último slide
+                }
             }
 
-            prevBtn.addEventListener('click', () => {
-                index = index > 0 ? index - 1 : images.length - 1;
-                showImage(index);
-            });
-
-            nextBtn.addEventListener('click', () => {
-                index = index < images.length - 1 ? index + 1 : 0; // Voltar para a primeira imagem se for a última
-                showImage(index);
-            });
+            // Iniciar o carrossel automaticamente
+            setInterval(nextSlide, 4000); // Troca de slide a cada 4 segundos
         </script>
         <br>
         <!--Inicio do Sobre-->
@@ -98,23 +95,21 @@
                 </div>
                 <div class="column">
                     <div class="card">
-                        <img src="img/thumb5.jpg">
+                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/qYap9iIYmX4"
+                            frameborder="0" allowfullscreen></iframe>
                         <div>
                             <h1 class="lcs_H1">Metodologias Ágeis</h1>
                             <h2 class="lcs_H2">Treinamento de Metodologias Ágeis - Aprenda XP, Scrum, Lean e Kanban</h2>
-                            <button class="btn"
-                                onclick="window.open('https://www.youtube.com/watch?v=qYap9iIYmX4&list=PLkM70VNwg9DRnQm7FhZQZTKQaVQocoEbY', '_blank')">Acessar</button>
                         </div>
                     </div>
                 </div>
                 <div class="column">
                     <div class="card">
-                        <img src="img/thumb2.jpg">
+                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/QRPbHdm05dk"
+                            frameborder="0" allowfullscreen></iframe>
                         <div>
                             <h1 class="lcs_H1">Estruturas e Algorítmos</h1>
                             <h2 class="lcs_H2">Aprenda sobre estrutura de dados e algorítmos</h2>
-                            <button class="btn"
-                                onclick="window.open('https://www.youtube.com/watch?v=QRPbHdm05dk&list=PLucm8g_ezqNpHdoSlPrLMB1Ga8dBrNRsz', '_blank')">Acessar</button>
                         </div>
                     </div>
                 </div>
@@ -123,23 +118,21 @@
             <div class="row">
                 <div class="column">
                     <div class="card">
-                        <img src="img/thumb3.jpg">
+                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/HtVRRHoASes"
+                            frameborder="0" allowfullscreen></iframe>
                         <div>
                             <h1 class="lcs_H1">CSS</h1>
                             <h2 class="lcs_H2">Curso completo de CSS</h2>
-                            <button class="btn"
-                                onclick="window.open('https://www.youtube.com/watch?v=HtVRRHoASes&list=PL2Fdisxwzt_f5C7Mv0kg1EAHhy2VJLf1c', '_blank')">Acessar</button>
                         </div>
                     </div>
                 </div>
                 <div class="column">
                     <div class="card">
-                        <img src="img/thumb4.webp">
+                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/nPEpaft1y1k"
+                            frameborder="0" allowfullscreen></iframe>
                         <div>
                             <h1 class="lcs_H1">HTML</h1>
                             <h2 class="lcs_H2">Curso completo de HTML</h2>
-                            <button class="btn"
-                                onclick="window.open('https://www.youtube.com/watch?v=nPEpaft1y1k&t=6s', '_blank')">Acessar</button>
                         </div>
                     </div>
                 </div>
@@ -148,56 +141,51 @@
             <div class="row">
                 <div class="column">
                     <div class="card">
-                        <img src="img/thumb8.jpg">
+                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/05WeJCU8CJ4"
+                            frameborder="0" allowfullscreen></iframe>
                         <div>
                             <h1 class="lcs_H1">Node JS</h1>
                             <h2 class="lcs_H2">Curso de Node JS completo</h2>
-                            <button class="btn"
-                                onclick="window.open('https://www.youtube.com/watch?v=05WeJCU8CJ4&list=PLnex8IkmReXwCyR-cGkyy8tCVAW7fGZow', '_blank')">Acessar</button>
                         </div>
                     </div>
                 </div>
                 <div class="column">
                     <div class="card">
-                        <img src="img/thumb10.jpg">
+                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/qH7rsZBENJo"
+                            frameborder="0" allowfullscreen></iframe>
                         <div>
                             <h1 class="lcs_H1">Laravel</h1>
                             <h2 class="lcs_H2">Curso de Laravel completo</h2>
-                            <button class="btn"
-                                onclick="window.open('hhttps://www.youtube.com/watch?v=qH7rsZBENJo&list=PLnDvRpP8BnewYKI1n2chQrrR4EYiJKbUG', '_blank')">Acessar</button>
                         </div>
                     </div>
                 </div>
                 <div class="column">
                     <div class="card">
-                        <img src="img/thumb7.webp">
+                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/hd2B7XQAFls"
+                            frameborder="0" allowfullscreen></iframe>
                         <div>
                             <h1 class="lcs_H1">React</h1>
                             <h2 class="lcs_H2">Curso de React completo</h2>
-                            <button class="btn"
-                                onclick="window.open('https://www.youtube.com/watch?v=hd2B7XQAFls', '_blank')">Acessar</button>
                         </div>
                     </div>
                 </div>
                 <div class="column">
                     <div class="card">
-                        <img src="img/thumb9.jpg">
+                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/2js9Q_BMD-8"
+                            frameborder="0" allowfullscreen></iframe>
                         <div>
                             <h1 class="lcs_H1">Ruby</h1>
                             <h2 class="lcs_H2">Curso de Ruby completo</h2>
-                            <button class="btn"
-                                onclick="window.open('https://www.youtube.com/watch?v=2js9Q_BMD-8&list=PLdDT8if5attEOcQGPHLNIfnSFiJHhGDOZ', '_blank')">Acessar</button>
                         </div>
                     </div>
                 </div>
                 <div class="column">
                     <div class="card">
-                        <img src="img/thumb1.png">
+                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/ZNFVFTqaL60"
+                            frameborder="0" allowfullscreen></iframe>
                         <div>
                             <h1 class="lcs_H1">Django</h1>
                             <h2 class="lcs_H2">Curso de Django completo</h2>
-                            <button class="btn"
-                                onclick="window.open('https://www.youtube.com/watch?v=8mei6uVttho&list=PLHz_AreHm4dmSj0MHol_aoNYCSGFqvfXV', '_blank')">Acessar</button>
                         </div>
                     </div>
                 </div>
@@ -206,45 +194,41 @@
             <div class="row">
                 <div class="column">
                     <div class="card">
-                        <img src="img/thumb11.webp">
+                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/S9uPNppGsGo"
+                            frameborder="0" allowfullscreen></iframe>
                         <div>
                             <h1 class="lcs_H1">Python</h1>
                             <h2 class="lcs_H2">Curso de Python completo</h2>
-                            <button class="btn"
-                                onclick="window.open('https://www.youtube.com/watch?v=S9uPNppGsGo&list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3oW0', '_blank')">Acessar</button>
                         </div>
                     </div>
                 </div>
                 <div class="column">
                     <div class="card">
-                        <img src="img/thumb6.jpg">
+                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/BXqUH86F-kA"
+                            frameborder="0" allowfullscreen></iframe>
                         <div>
                             <h1 class="lcs_H1">JavaScript</h1>
                             <h2 class="lcs_H2">Curso de JavaScript Moderno</h2>
-                            <button class="btn"
-                                onclick="window.open('https://www.youtube.com/watch?v=BXqUH86F-kA&list=PLntvgXM11X6pi7mW0O4ZmfUI1xDSIbmTm', '_blank')">Acessar</button>
                         </div>
                     </div>
                 </div>
                 <div class="column">
                     <div class="card">
-                        <img src="img/thumb12.jpg">
+                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/tJVFOR08QJg"
+                            frameborder="0" allowfullscreen></iframe>
                         <div>
                             <h1 class="lcs_H1">C#</h1>
                             <h2 class="lcs_H2">Curso de C# completo</h2>
-                            <button class="btn"
-                                onclick="window.open('https://www.youtube.com/watch?v=tJVFOR08QJg&list=PLPc-V1ujthioJ8Cq_yMzYAbeSvaPye-aa', '_blank')">Acessar</button>
                         </div>
                     </div>
                 </div>
                 <div class="column">
                     <div class="card">
-                        <img src="img/thumb13.jpg">
+                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/sTX0UEplF54"
+                            frameborder="0" allowfullscreen></iframe>
                         <div>
                             <h1 class="lcs_H1">Java</h1>
                             <h2 class="lcs_H2">Curso de Java completo</h2>
-                            <button class="btn"
-                                onclick="window.open('https://www.youtube.com/watch?v=sTX0UEplF54&list=PLHz_AreHm4dkI2ZdjTwZA4mPMxWTfNSpR', '_blank')">Acessar</button>
                         </div>
                     </div>
                 </div>
@@ -253,23 +237,21 @@
             <div class="row">
                 <div class="column">
                     <div class="card">
-                        <img src="img/thumb14.webp">
+                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/lP-XV2wXXQM"
+                            frameborder="0" allowfullscreen></iframe>
                         <div>
                             <h1 class="lcs_H1">Login e Senha</h1>
                             <h2 class="lcs_H2">Criar sistema de login e senha</h2>
-                            <button class="btn"
-                                onclick="window.open('https://www.youtube.com/watch?v=lP-XV2wXXQM', '_blank')">Acessar</button>
                         </div>
                     </div>
                 </div>
                 <div class="column">
                     <div class="card">
-                        <img src="img/thumb4.webp">
+                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/nPEpaft1y1k"
+                            frameborder="0" allowfullscreen></iframe>
                         <div>
                             <h1 class="lcs_H1">API Whatsapp</h1>
                             <h2 class="lcs_H2">Api para envio de mensagens via Whatsapp</h2>
-                            <button class="btn"
-                                onclick="window.open('https://www.youtube.com/watch?v=nPEpaft1y1k&t=6s', '_blank')">Acessar</button>
                         </div>
                     </div>
                 </div>

@@ -146,7 +146,7 @@ header {
   }
 }
 
-.menu-desktop{
+.menu-desktop {
   top: 20px
 }
 
@@ -420,9 +420,11 @@ footer {
 }
 
 .carousel img {
-  width: calc(100% - 1rem); /* 100% da largura do container - 1rem de espaçamento */
+  width: calc(100% - 1rem);
+  /* 100% da largura do container - 1rem de espaçamento */
   height: auto;
-  margin-right: 1rem; /* Espaçamento entre as imagens */
+  margin-right: 1rem;
+  /* Espaçamento entre as imagens */
 }
 
 .prev-btn,
@@ -438,15 +440,25 @@ footer {
   z-index: 1;
 }
 
-.prev-btn {
-  left: 0;
+/* Estilos para o carrossel */
+.carousel {
+  display: flex;
+  overflow-x: hidden;
+  width: 100%;
+  scroll-behavior: smooth;
+  /* Para uma transição suave */
 }
 
-.next-btn {
-  right: 0;
+/* Estilos para o carrossel */
+.carousel {
+  display: flex;
+  overflow-x: hidden;
+  width: 100%;
+  scroll-behavior: smooth;
+  /* Para uma transição suave */
 }
 
-
-.next-btn {
-  right: 0;
+.carousel__item {
+  flex: 0 0 100%;
+  max-width: 20%;
 }
