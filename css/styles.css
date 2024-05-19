@@ -442,13 +442,15 @@ footer {
 /* Estilos para o carrossel */
 .carousel {
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
   overflow-x: hidden;
-  width: 100%;
+  width: 60%;
   scroll-behavior: smooth;
   /* Para uma transição suave */
 }
 
 .carousel__item {
   flex: 0 0 100%;
-  max-width: 20%;
+  max-width: 25%;
 }
