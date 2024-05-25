@@ -124,13 +124,13 @@ header {
   nav {
     ul {
       list-style-type: none;
-      padding-left: 4rem;
+      padding-left: 1rem;
       padding-top: 6rem;
 
       li {
         display: inline-block;
-        padding-left: 3rem;
-        padding-right: 3rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
         font-size: 5%;
@@ -280,7 +280,7 @@ footer {
 .card {
   display: flex;
   flex-direction: column;
-  width: 700px;
+  width: 600px;
   background-color: var(--corPrimaria);
   border-radius: 15px;
   padding: 30px;
@@ -454,3 +454,4 @@ footer {
   flex: 0 0 100%;
   max-width: 25%;
 }
+
