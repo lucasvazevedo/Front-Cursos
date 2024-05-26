@@ -53,6 +53,7 @@
 body {
   font-family: "Poppins", sans-serif;
   background-image: url("../img/bg-signup.png");
+  background-attachment: fixed;
   padding-left: 40px;
   padding-right: 40px;
   margin: 0;
