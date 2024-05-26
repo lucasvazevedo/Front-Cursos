@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -18,7 +18,7 @@
         <div class="content">
             <!--FORMULÁRIO DE LOGIN-->
             <div id="login">
-                <form method="post" action="">
+                <form id="loginForm" method="post" action="">
                     <h1>Login</h1>
                     <p>
                         <label for="email_login">Seu e-mail</label>
@@ -67,7 +67,8 @@
 
                     <p>
                         <label for="senha_cad">Sua senha</label>
-                        <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="Crie sua senha" />
+                        <input id="senha_cad" name="senha_cad" required="required" type="password"
+                            placeholder="Crie sua senha" />
                     </p>
 
                     <p>
@@ -82,6 +83,20 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var email = document.getElementById("email_login").value;
+            var senha = document.getElementById("senha_login").value;
+
+            if (email && senha) {
+                window.location.href = "index.html";
+            } else {
+                alert("Por favor, preencha ambos os campos.");
+            }
+        });
+    </script>
 </body>
 
 </html>
