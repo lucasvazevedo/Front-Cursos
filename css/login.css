@@ -32,12 +32,16 @@ a.links {
 /* formatando o cabeçalho dos formulários */
 h1 {
     font-size: 48px;
-    color: #25205b;
+    color: #ffffff;
     padding: 10px 0;
     font-family: Arial, sans-serif;
     font-weight: bold;
     text-align: center;
     padding-bottom: 30px;
+}
+
+h2 {
+    color: #ffffff;
 }
 
 h1:after {
@@ -59,7 +63,7 @@ p:first-child {
 }
 
 label {
-    color: #405c60;
+    color: #ffffff;
     position: relative;
 }
 
@@ -164,7 +168,7 @@ input[type="submit"]:hover {
     width: 88%;
     padding: 18px 6% 60px 6%;
     margin: auto auto auto auto;
-    background: rgb(247, 247, 247);
+    background-color: #42439e;
     border: 1px solid rgba(147, 184, 189, 0.8);
     
 
@@ -253,4 +257,5 @@ input[type="submit"]:hover {
     width: 100%;
     text-align: left;
     margin-bottom: 2rem;
+    
  }
