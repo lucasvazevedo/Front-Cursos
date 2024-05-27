@@ -50,6 +50,7 @@
   --header-height-diferenca: calc(var(--header-interface-height) - var(--header-flex-height));
 }
 
+
 body {
   font-family: "Poppins", sans-serif;
   background-image: url("../img/bg-signup.png");
@@ -139,8 +140,8 @@ header {
         font-size: 5%;
         font-weight: 300px;
         border-radius: 10px;
-        margin-left: 6rem;
-        margin-right: 6rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
         background-color: var(--realceV2);
         border: 0;
         cursor: pointer;
