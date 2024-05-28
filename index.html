@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Curso Script Tech</title>
+    <script src="https://kit.fontawesome.com/cf6fa412bd.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
     <header>
         <div class="interface">
             <div class="flex">
@@ -19,221 +20,163 @@
                 </div><!--logo-->
                 <nav class="menu-desktop">
                     <ul>
-                        <li><a href="#iniciantes">Iniciantes</a></li>
-                        <li><a href="#frontend">Front End</a></li>
-                        <li><a href="#backend">Back End</a></li>
-                        <li><a href="#programacao">Programação</a></li>
-                        <li><a href="#bonus">Bonus!</a></li>
-                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#login">Login</a></li>  
+                        <li><a href="#cadastro">Cadastro</a></li>                
                     </ul>
                 </nav>
             </div>
         </div><!--interface-->
     </header>
-    
-        <br>
-        <section class="areaSection">
-            <h2 id="iniciantes">iniciantes</h2>
-            <div class="row">
-                <div class="column">
-                    <div class="card">
-                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/8mei6uVttho"
-                            frameborder="0" allowfullscreen></iframe>
-                        <div>
-                            <h1 class="lcs_H1">Introdução a Algorítmos</h1>
-                            <h2 class="lcs_H2">Conceitos básicos para a algorítmos</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="card">
-                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/qYap9iIYmX4"
-                            frameborder="0" allowfullscreen></iframe>
-                        <div>
-                            <h1 class="lcs_H1">Metodologias Ágeis</h1>
-                            <h2 class="lcs_H2">Treinamento de Metodologias Ágeis - Aprenda XP, Scrum, Lean e Kanban</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="card">
-                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/QRPbHdm05dk"
-                            frameborder="0" allowfullscreen></iframe>
-                        <div>
-                            <h1 class="lcs_H1">Estruturas e Algorítmos</h1>
-                            <h2 class="lcs_H2">Aprenda sobre estrutura de dados e algorítmos</h2>
-                        </div>
-                    </div>
-                </div>
+    <main>
+        <!--Inicio do Banner-->
+        <div class="carousel">
+            <div class="carousel__item">
+                <img src="img/c1.jpeg" alt="Image 1">
             </div>
-            <h2 id="frontend">Front End</h2>
-            <div class="row">
-                <div class="column">
-                    <div class="card">
-                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/HtVRRHoASes"
-                            frameborder="0" allowfullscreen></iframe>
-                        <div>
-                            <h1 class="lcs_H1">CSS</h1>
-                            <h2 class="lcs_H2">Curso completo de CSS</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="card">
-                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/nPEpaft1y1k"
-                            frameborder="0" allowfullscreen></iframe>
-                        <div>
-                            <h1 class="lcs_H1">HTML</h1>
-                            <h2 class="lcs_H2">Curso completo de HTML</h2>
-                        </div>
-                    </div>
-                </div>
+            <div class="carousel__item">
+                <img src="img/c2.jpeg" alt="Image 2">
             </div>
-            <h2 id="backend">Back End</h2>
-            <div class="row">
-                <div class="column">
-                    <div class="card">
-                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/05WeJCU8CJ4"
-                            frameborder="0" allowfullscreen></iframe>
-                        <div>
-                            <h1 class="lcs_H1">Node JS</h1>
-                            <h2 class="lcs_H2">Curso de Node JS completo</h2>
-                        </div>s
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="card">
-                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/qH7rsZBENJo"
-                            frameborder="0" allowfullscreen></iframe>
-                        <div>
-                            <h1 class="lcs_H1">Laravel</h1>
-                            <h2 class="lcs_H2">Curso de Laravel completo</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="card">
-                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/hd2B7XQAFls"
-                            frameborder="0" allowfullscreen></iframe>
-                        <div>
-                            <h1 class="lcs_H1">React</h1>
-                            <h2 class="lcs_H2">Curso de React completo</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="card">
-                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/2js9Q_BMD-8"
-                            frameborder="0" allowfullscreen></iframe>
-                        <div>
-                            <h1 class="lcs_H1">Ruby</h1>
-                            <h2 class="lcs_H2">Curso de Ruby completo</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="card">
-                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/ZNFVFTqaL60"
-                            frameborder="0" allowfullscreen></iframe>
-                        <div>
-                            <h1 class="lcs_H1">Django</h1>
-                            <h2 class="lcs_H2">Curso de Django completo</h2>
-                        </div>
-                    </div>
-                </div>
+            <div class="carousel__item">
+                <img src="img/c3.png" alt="Image 3">
             </div>
-            <h2 id="programacao">Programação</h2>
-            <div class="row">
-                <div class="column">
-                    <div class="card">
-                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/S9uPNppGsGo"
-                            frameborder="0" allowfullscreen></iframe>
-                        <div>
-                            <h1 class="lcs_H1">Python</h1>
-                            <h2 class="lcs_H2">Curso de Python completo</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="card">
-                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/BXqUH86F-kA"
-                            frameborder="0" allowfullscreen></iframe>
-                        <div>
-                            <h1 class="lcs_H1">JavaScript</h1>
-                            <h2 class="lcs_H2">Curso de JavaScript Moderno</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="card">
-                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/tJVFOR08QJg"
-                            frameborder="0" allowfullscreen></iframe>
-                        <div>
-                            <h1 class="lcs_H1">C#</h1>
-                            <h2 class="lcs_H2">Curso de C# completo</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="card">
-                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/sTX0UEplF54"
-                            frameborder="0" allowfullscreen></iframe>
-                        <div>
-                            <h1 class="lcs_H1">Java</h1>
-                            <h2 class="lcs_H2">Curso de Java completo</h2>
-                        </div>
-                    </div>
-                </div>
+            <div class="carousel__item">
+                <img src="img/c4.png" alt="Image 4">
             </div>
-            <h2 id="bonus">Bonus!</h2>
-            <div class="row">
-                <div class="column">
-                    <div class="card">
-                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/lP-XV2wXXQM"
-                            frameborder="0" allowfullscreen></iframe>
-                        <div>
-                            <h1 class="lcs_H1">Login e Senha</h1>
-                            <h2 class="lcs_H2">Criar sistema de login e senha</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="card">
-                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/nPEpaft1y1k"
-                            frameborder="0" allowfullscreen></iframe>
-                        <div>
-                            <h1 class="lcs_H1">API Whatsapp</h1>
-                            <h2 class="lcs_H2">Api para envio de mensagens via Whatsapp</h2>
-                        </div>
-                    </div>
-                </div>
+            <div class="carousel__item">
+                <img src="img/c5.png" alt="Image 5">
             </div>
-        </section>
-        <br>
-        <!--Incio de Contato-->
-        <section id="contato" class="areaSection">
-            <h2>Contato</h2>
-            <div class="pageForm">
-                <form action="https://api.staticforms.xyz/submit" method="post">
-                    <label>Nome</label>
-                    <input type="text" name="name" placeholder="Digite seu nome" autocomplete="off" required>
-                    <label>Email</label>
-                    <input type="email" name="email" placeholder="Digite seu email" autocomplete="on" required>
-                    <label>Mensagem</label>
-                    <textarea name="message" cols="30" rows="10" placeholder="Digite sua mensagem" required></textarea>
-                    <input type="submit" value="Acessar" class="btn" />
+            <div class="carousel__item">
+                <img src="img/c6.jpeg" alt="Image 6">
+            </div>
+            <div class="carousel__item">
+                <img src="img/c7.png" alt="Image 7">
+            </div>
+            <div class="carousel__item">
+                <img src="img/c8.png" alt="Image 8">
+            </div>
+        </div>
+        <script>
+            // Função para mover para o próximo slide
+            function nextSlide() {
+                const carousel = document.querySelector('.carousel');
+                carousel.scrollLeft += carousel.clientWidth; // Move para o próximo slide
+                if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth) {
+                    carousel.scrollLeft = 0; // Volta para o primeiro slide se estiver no último slide
+                }
+            }
 
-                    <input type="hidden" name="accessKey" value="24ddb5cd-7ae9-41ea-8e14-e95efd2c713b">
-                    <input type="hidden" name="redirectTo"
-                        value="https://lucasvazevedo.github.io/Script-Tech/obrigado.html">
-                </form>
+            // Iniciar o carrossel automaticamente
+            setInterval(nextSlide, 4000); // Troca de slide a cada 3 segundos
+        </script>
+        <br>
+        <!--Inicio do Sobre-->
+        <section class="areaSection" id="sobre">
+            <h2>Sobre</h2>
+            <br>
+            <p>
+                No mundo corporativo, é importante estar alinhado às novas tendências e preparado para oferecer visões estratégicas e proativas. O atual mercado de trabalho está valorizando não só o domínio de conhecimentos técnicos, mas também as competências emocionais e comportamentais. É cada vez mais necessário “abrir o leque” e ampliar os conhecimentos, descobrir novas habilidades e aprimorar competências que já possui para criar vantagem competitiva no mercado. 
+                Os cursos de atualização são uma forma de agregar novas competências ao currículo, pois têm o objetivo de incluir os mais novos conceitos, ideias do mercado e do mundo. Os alunos da FEPI, através da plataforma Script Tech, está disponibilizando cursos grátis on-line em várias linguagens de programação.
+            </p>
+        </section><!--Fim do Sobre-->
+
+        <div class="container">
+            <a class="links" id="paracadastro"></a>
+            <a class="links" id="paralogin"></a>
+
+            <div class="content">
+                <!--FORMULÁRIO DE LOGIN-->
+                <div id="login">
+                    <form id="loginForm" method="post" action="">
+                        <h1>Login</h1>
+                        <h2>Partipe do mundo tech!</h2>
+                        <br />
+                        <p>
+                            <label for="email_login">Seu e-mail</label>
+                            <input id="email_login" name="email_login" required="required" type="text"
+                                placeholder="Digite seu e-mail" />
+                        </p>
+
+                        <p>
+                            <label for="senha_login">Sua senha</label>
+                            <input id="senha_login" name="senha_login" required="required" type="password"
+                                placeholder="Digite sua senha" />
+                        </p>
+
+                        <p>
+                            <input type="checkbox" name="manterlogado" id="manterlogado" value="" />
+                            <label for="manterlogado">Manter-me logado</label>
+                        </p>
+
+                        <p>
+                            <input type="submit" value="Logar" />
+                        </p>
+
+                        <p class="link">
+                            Ainda não tem conta?
+                            <a href="#paracadastro">Cadastre-se</a>
+                        </p>
+                    </form>
+                </div>
+
+                <!--FORMULÁRIO DE CADASTRO-->
+                <div id="cadastro">
+                    <form method="post" action="">
+                        <h1>Cadastro</h1>
+
+                        <p>
+                            <label for="nome_cad">Seu nome</label>
+                            <input id="nome_cad" name="nome_cad" required="required" type="text"
+                                placeholder="Digite seu nome" />
+                        </p>
+
+                        <p>
+                            <label for="email_cad">Seu e-mail</label>
+                            <input id="email_cad" name="email_cad" required="required" type="email"
+                                placeholder="Digite seu e-mail" />
+                        </p>
+
+                        <p>
+                            <label for="senha_cad">Sua senha</label>
+                            <input id="senha_cad" name="senha_cad" required="required" type="password"
+                                placeholder="Crie sua senha" />
+                        </p>
+
+                        <p>
+                            <input type="submit" value="Cadastrar" />
+                        </p>
+
+                        <p class="link">
+                            Já tem conta?
+                            <a href="#paralogin"> Ir para Login </a>
+                        </p>
+                    </form>
+                </div>
             </div>
-        </section><!--Fim de Contato-->
-    </main>
-    <footer>
-        <!-- Rodapé -->
-        <p>&copy; 2024 Script Tech. Todos os direitos reservados.</p>
-    </footer>
+        </div>
+        <br>
+        <br>
+        <br>
+        <footer>
+            <!-- Rodapé -->
+            <p>&copy; 2024 Script Tech. Todos os direitos reservados.</p>
+        </footer>
+
+
+        <script>
+            document.getElementById("loginForm").addEventListener("submit", function (event) {
+                event.preventDefault();
+                var email = document.getElementById("email_login").value;
+                var senha = document.getElementById("senha_login").value;
+
+                if (email && senha) {
+                    window.location.href = "main.html";
+                } else {
+                    alert("Por favor, preencha ambos os campos.");
+                }
+            });
+        </script>
+
 </body>
 
 </html>
