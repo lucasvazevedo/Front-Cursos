@@ -91,8 +91,6 @@ body {
  * */
 
 header {
-  /* Definicoes de subgrupoes dentro da tag header*/
-
   .interface {
     display: flex;
     align-items: center;
@@ -428,10 +426,8 @@ footer {
 
 .carousel img {
   width: calc(100% - 2rem);
-  /* 100% da largura do container - 1rem de espaçamento */
   height: auto;
   margin-right: 1rem;
-  /* Espaçamento entre as imagens */
 }
 
 .prev-btn,
@@ -454,16 +450,12 @@ footer {
   margin-right: auto;
   overflow-x: hidden;
   width: 60%;
-  /* Largura do container do carrossel*/
   scroll-behavior: smooth;
-  /* Para uma transição suave */
 }
 
 .carousel__item {
   flex: 0 0 100%;
-  /* Largura de cada item */
   max-width: 25%;
-  /* 4 itens por vez - essa regra define a quantidade de itens*/
 }
 
 @media (max-width: 1010px) {
@@ -475,11 +467,6 @@ footer {
     padding-right: 10px;
     margin: 0;
   }
-
-
-  
-
-
 
   .areaSection {
 
@@ -516,29 +503,19 @@ footer {
     margin-right: auto;
     overflow-x: hidden;
     width: 90%;
-    /* Largura do container do carrossel*/
     scroll-behavior: smooth;
-    /* Para uma transição suave */
   }
 
   .carousel__item {
     flex: 0 0 80%;
-    /* Largura de cada item */
     max-width: 33%;
-    /* 4 itens por vez - essa regra define a quantidade de itens*/
   }
 
   header {
-    /* Definicoes de subgrupoes dentro da tag header*/
-
     .flex{
       display: grid;
     }
-  
-  
-      
 
-   
 
     a {
       color: var(--corTexto);

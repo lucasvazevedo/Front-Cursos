@@ -1,15 +1,83 @@
-/* CSS reset */
-*, *:before, *:after { 
-    margin:0;
-    padding:0;
-    font-family: Arial,sans-serif;
-  }
-  
-  body{
-    margin:10px;
-  }
-  
-  a{
+/* CSS reset para remover margens e paddings padrão, e definir a fonte */
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Definição de margem padrão para o corpo */
+body {
+    margin: 10px;
+}
+
+/* Remoção de sublinhado de todos os links */
+a {
+    text-decoration: none;
+}
+
+/* Esconde os links com a classe "links" */
+a.links {
+    display: none;
+}
+
+/* Estilo da div .content que contém os formulários */
+.content {
+    width: 500px;
+    height: 25rem;
+    margin: 0px auto;
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* Estilo do cabeçalho principal h1 dos formulários */
+h1 {
+    font-size: 48px;
+    color: #ffffff;
+    padding: 10px 0;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+/* Cor do texto para o cabeçalho secundário h2 */
+h2 {
+    color: #ffffff;
+}
+
+/* Linha decorativa abaixo do h1 usando pseudo-elemento :after */
+h1:after {
+    content: ' ';
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: 10px;
+    background: linear-gradient(to right, rgba(147, 184, 189, 0) 0%, rgba(147, 184, 189, 0.8) 20%, rgba(147, 184, 189, 1) 53%, rgba(147, 184, 189, 0.8) 79%, rgba(147, 184, 189, 0) 100%);
+}
+
+/* Margem inferior para parágrafos */
+p {
+    margin-bottom: 15px;
+}
+
+/* Remover margem para o primeiro parágrafo *//* CSS reset */
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 10px;
+}
+
+a {
     text-decoration: none;
 }
 
@@ -50,8 +118,7 @@ h1:after {
     width: 100%;
     height: 2px;
     margin-top: 10px;
-    background: -webkit-linear-gradient(left, rgba(147, 184, 189, 0) 0%, rgba(147, 184, 189, 0.8) 20%, rgba(147, 184, 189, 1) 53%, rgba(147, 184, 189, 0.8) 79%, rgba(147, 184, 189, 0) 100%);
-    background: linear-gradient(left, rgba(147, 184, 189, 0) 0%, rgba(147, 184, 189, 0.8) 20%, rgba(147, 184, 189, 1) 53%, rgba(147, 184, 189, 0.8) 79%, rgba(147, 184, 189, 0) 100%);
+    background: linear-gradient(to right, rgba(147, 184, 189, 0) 0%, rgba(147, 184, 189, 0.8) 20%, rgba(147, 184, 189, 1) 53%, rgba(147, 184, 189, 0.8) 79%, rgba(147, 184, 189, 0) 100%);
 }
 
 p {
@@ -67,7 +134,7 @@ label {
     position: relative;
 }
 
-/**** advanced input styling ****/
+
 /* placeholder */
 ::-webkit-input-placeholder {
     color: #bebcbc;
@@ -89,14 +156,8 @@ input:not([type="checkbox"]) {
     margin-top: 4px;
     padding: 10px;
     border: 1px solid #b2b2b2;
-
-    -webkit-border-radius: 3px;
     border-radius: 3px;
-
-    -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
     box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
-
-    -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
 }
 
@@ -112,7 +173,6 @@ input[type="submit"] {
     margin-bottom: 10px;
     text-shadow: 0 1px 1px #333;
 
-    -webkit-border-radius: 5px;
     border-radius: 5px;
 
     transition: all 0.2s linear;
@@ -135,7 +195,6 @@ input[type="submit"]:hover {
     text-align: right;
     border-top: 1px solid #dbe5e8;
 
-    -webkit-border-radius: 0 0 5px 5px;
     border-radius: 0 0 5px 5px;
 }
 
@@ -146,11 +205,7 @@ input[type="submit"]:hover {
     color: #25205b;
     margin-left: 10px;
     border: 1px solid #6e3ec1;
-
-    -webkit-border-radius: 4px;
     border-radius: 4px;
-
-    -webkit-transition: all 0.4s linear;
     transition: all 0.4s linear;
 }
 
@@ -160,7 +215,7 @@ input[type="submit"]:hover {
     border: 1px solid #B7B6EC;
 }
 
-/* estilos para para ambos os formulários */
+/* estilos para ambos os formulários */
 #cadastro,
 #login {
     position: absolute;
@@ -170,15 +225,7 @@ input[type="submit"]:hover {
     margin: auto auto auto auto;
     background-color: #42439e;
     border: 1px solid rgba(147, 184, 189, 0.8);
-    
-
-    -webkit-box-shadow: 5px;
     border-radius: 5px;
-
-    -webkit-animation-duration: 0.5s;
-    -webkit-animation-timing-function: ease;
-    -webkit-animation-fill-mode: both;
-
     animation-duration: 0.5s;
     animation-timing-function: ease;
     animation-fill-mode: both;
@@ -187,16 +234,12 @@ input[type="submit"]:hover {
 #paracadastro:target~.content #cadastro,
 #paralogin:target~.content #login {
     z-index: 2;
-    -webkit-animation-name: fadeInLeft;
     animation-name: fadeInLeft;
-
-    -webkit-animation-delay: .1s;
     animation-delay: .1s;
 }
 
 #registro:target~.content #login,
 #paralogin:target~.content #cadastro {
-    -webkit-animation-name: fadeOutLeft;
     animation-name: fadeOutLeft;
 }
 
@@ -252,39 +295,226 @@ input[type="submit"]:hover {
 
 .footer {
     position: fixed;
-    left: 0;
     bottom: 1rem;
     width: 100%;
-    text-align: left;
+    text-align: center;
     margin-bottom: 2rem;
-
 }
 
 .flex {
     display: flex;
-    justify-content: center; /* Centraliza os elementos horizontalmente */
-    align-items: center; /* Centraliza os elementos verticalmente */
-    width: 75%; /* Garante que o .flex ocupe toda a largura */
+    justify-content: center;
+    align-items: center;
+    width: 75%;
 }
 
 .logo {
-    margin-right: 40px; /* Adiciona uma margem à direita da logo */
-    
+    margin-right: 40px;
 }
 
 .menu-desktop {
-    flex: 1; /* Ocupa o espaço restante */
-    text-align: center; /* Centraliza o texto dentro do menu */
-
+    flex: 1;
+    text-align: center;
+    margin-bottom: 85px;
 }
 
 .menu-desktop ul {
     list-style: none;
-    padding: 0;
     margin: 0;
 }
 
 .menu-desktop li {
-    display: inline; /* Exibe os itens do menu em linha */
-    margin-right: 80px; /* Adiciona um espaçamento entre os itens do menu */
+    display: inline;
+    margin-right: 95px;
+    padding: 25px;
+}
+p:first-child {
+    margin: 0px;
+}
+
+/* Estilo das labels */
+label {
+    color: #ffffff;
+    position: relative;
+}
+
+/* Placeholder para Webkit browsers */
+::-webkit-input-placeholder {
+    color: #bebcbc;
+    font-style: italic;
+}
+
+/* Placeholder para Mozilla browsers */
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: #bebcbc;
+    font-style: italic;
+}
+
+/* Remover outline dos inputs */
+input {
+    outline: none;
+}
+
+/* Estilo para todos os inputs exceto checkboxes */
+input:not([type="checkbox"]) {
+    width: 95%;
+    margin-top: 4px;
+    padding: 10px;
+    border: 1px solid #b2b2b2;
+    border-radius: 3px;
+    box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    transition: all 0.2s linear;
+}
+
+/* Estilo do botão submit */
+input[type="submit"] {
+    width: 100% !important;
+    cursor: pointer;
+    background: #25205b;
+    padding: 8px 5px;
+    color: #fff;
+    font-size: 20px;
+    border: 1px solid #fff;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 1px #333;
+    border-radius: 5px;
+    transition: all 0.2s linear;
+}
+
+/* Alteração de cor ao hover do botão submit */
+input[type="submit"]:hover {
+    background: #4ab3c6;
+}
+
+/* Estilo dos links que mudam de um formulário para outro */
+.link {
+    position: absolute;
+    background: #e1eaeb;
+    color: #7f7c7c;
+    left: 0px;
+    height: 20px;
+    width: 440px;
+    padding: 17px 30px 20px 30px;
+    font-size: 16px;
+    text-align: right;
+    border-top: 1px solid #dbe5e8;
+    border-radius: 0 0 5px 5px;
+}
+
+/* Estilo dos links dentro da classe .link */
+.link a {
+    font-weight: bold;
+    background: #f7f8f1;
+    padding: 6px;
+    color: #25205b;
+    margin-left: 10px;
+    border: 1px solid #6e3ec1;
+    border-radius: 4px;
+    transition: all 0.4s linear;
+}
+
+/* Alteração de cor ao hover dos links dentro da classe .link */
+.link a:hover {
+    color: #25205b;
+    background: #f7f7f7;
+    border: 1px solid #B7B6EC;
+}
+
+/* Estilos para os formulários #cadastro e #login */
+#cadastro,
+#login {
+    position: absolute;
+    top: 0px;
+    width: 88%;
+    padding: 18px 6% 60px 6%;
+    margin: auto;
+    background-color: #42439e;
+    border: 1px solid rgba(147, 184, 189, 0.8);
+    border-radius: 5px;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+
+/* Animação de fadeInLeft ao focar nos formulários */
+#paracadastro:target~.content #cadastro,
+#paralogin:target~.content #login {
+    z-index: 2;
+    animation-name: fadeInLeft;
+    animation-delay: .1s;
+}
+
+/* Animação de fadeOutLeft ao perder o foco nos formulários */
+#registro:target~.content #login,
+#paralogin:target~.content #cadastro {
+    animation-name: fadeOutLeft;
+}
+
+/* Animação de fadeInLeft */
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animação de fadeOutLeft */
+@keyframes fadeOutLeft {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+}
+
+/* Estilo do rodapé */
+.footer {
+    position: fixed;
+    bottom: 1rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Estilo para a classe flex */
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+}
+
+/* Margem à direita para a logo */
+.logo {
+    margin-right: 40px;
+}
+
+/* Estilo do menu desktop */
+.menu-desktop {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 85px;
+}
+
+/* Remoção de lista dos itens do menu */
+.menu-desktop ul {
+    list-style: none;
+    margin: 0;
+}
+
+/* Estilo dos itens do menu desktop */
+.menu-desktop li {
+    display: inline;
+    margin-right: 95px;
+    padding: 25px;
 }
