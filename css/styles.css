@@ -282,6 +282,11 @@ footer {
   color: var(--corSecundaria);
 }
 
+.rodape{
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .card {
   display: flex;
   flex-direction: column;
